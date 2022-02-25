@@ -1,0 +1,595 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title "grids matrix"
+Date "2022-02-24"
+Rev "0.1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+12V #PWR?
+U 1 1 62E9834A
+P 3850 1550
+AR Path="/62E9834A" Ref="#PWR?"  Part="1" 
+AR Path="/62E458D7/62E9834A" Ref="#PWR0172"  Part="1" 
+F 0 "#PWR0172" H 3850 1400 50  0001 C CNN
+F 1 "+12V" H 3865 1723 50  0000 C CNN
+F 2 "" H 3850 1550 50  0001 C CNN
+F 3 "" H 3850 1550 50  0001 C CNN
+	1    3850 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 62E98350
+P 3850 2350
+AR Path="/62E98350" Ref="#PWR?"  Part="1" 
+AR Path="/62E458D7/62E98350" Ref="#PWR0173"  Part="1" 
+F 0 "#PWR0173" H 3850 2450 50  0001 C CNN
+F 1 "-12V" H 3865 2523 50  0000 C CNN
+F 2 "" H 3850 2350 50  0001 C CNN
+F 3 "" H 3850 2350 50  0001 C CNN
+	1    3850 2350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3850 1800 3850 1550
+Wire Wire Line
+	3850 2200 3850 2350
+$Comp
+L power:+12V #PWR?
+U 1 1 62E98358
+P 4600 1550
+AR Path="/62E98358" Ref="#PWR?"  Part="1" 
+AR Path="/62E458D7/62E98358" Ref="#PWR0174"  Part="1" 
+F 0 "#PWR0174" H 4600 1400 50  0001 C CNN
+F 1 "+12V" H 4615 1723 50  0000 C CNN
+F 2 "" H 4600 1550 50  0001 C CNN
+F 3 "" H 4600 1550 50  0001 C CNN
+	1    4600 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 62E9835E
+P 4600 2350
+AR Path="/62E9835E" Ref="#PWR?"  Part="1" 
+AR Path="/62E458D7/62E9835E" Ref="#PWR0175"  Part="1" 
+F 0 "#PWR0175" H 4600 2450 50  0001 C CNN
+F 1 "-12V" H 4615 2523 50  0000 C CNN
+F 2 "" H 4600 2350 50  0001 C CNN
+F 3 "" H 4600 2350 50  0001 C CNN
+	1    4600 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP_Small C?
+U 1 1 62E98364
+P 4600 1750
+AR Path="/62E98364" Ref="C?"  Part="1" 
+AR Path="/62E458D7/62E98364" Ref="C50"  Part="1" 
+F 0 "C50" H 4688 1796 50  0000 L CNN
+F 1 "47u" H 4688 1705 50  0000 L CNN
+F 2 "" H 4600 1750 50  0001 C CNN
+F 3 "~" H 4600 1750 50  0001 C CNN
+	1    4600 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP_Small C?
+U 1 1 62E9836A
+P 4600 2150
+AR Path="/62E9836A" Ref="C?"  Part="1" 
+AR Path="/62E458D7/62E9836A" Ref="C51"  Part="1" 
+F 0 "C51" H 4688 2196 50  0000 L CNN
+F 1 "47u" H 4688 2105 50  0000 L CNN
+F 2 "" H 4600 2150 50  0001 C CNN
+F 3 "~" H 4600 2150 50  0001 C CNN
+	1    4600 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62E98370
+P 5350 2300
+AR Path="/62E98370" Ref="#PWR?"  Part="1" 
+AR Path="/62E458D7/62E98370" Ref="#PWR0176"  Part="1" 
+F 0 "#PWR0176" H 5350 2050 50  0001 C CNN
+F 1 "GND" H 5355 2127 50  0000 C CNN
+F 2 "" H 5350 2300 50  0001 C CNN
+F 3 "" H 5350 2300 50  0001 C CNN
+	1    5350 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 1550 4600 1650
+Wire Wire Line
+	4600 1850 4600 1950
+Wire Wire Line
+	4600 2250 4600 2350
+Wire Wire Line
+	4600 1950 5350 1950
+Wire Wire Line
+	5350 1950 5350 2300
+Connection ~ 4600 1950
+Wire Wire Line
+	4600 1950 4600 2050
+$Comp
+L Regulator_Linear:LM1117-5.0 U?
+U 1 1 62E98383
+P 3400 5050
+AR Path="/62E98383" Ref="U?"  Part="1" 
+AR Path="/62E458D7/62E98383" Ref="U13"  Part="1" 
+F 0 "U13" H 3400 5292 50  0000 C CNN
+F 1 "LM1117-5.0" H 3400 5201 50  0000 C CNN
+F 2 "" H 3400 5050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 3400 5050 50  0001 C CNN
+	1    3400 5050
+	1    0    0    -1  
+$EndComp
+Connection ~ 2600 1900
+Wire Wire Line
+	2600 1900 2600 2000
+Wire Wire Line
+	3100 1900 2600 1900
+Connection ~ 2600 2000
+Wire Wire Line
+	2600 2000 2600 2100
+Wire Wire Line
+	3100 2000 2600 2000
+Wire Wire Line
+	2600 2100 2150 2100
+Connection ~ 2600 2100
+Wire Wire Line
+	2150 2100 2150 2200
+Wire Wire Line
+	3100 2100 2600 2100
+$Comp
+L power:GND #PWR?
+U 1 1 62E98393
+P 2150 2200
+AR Path="/62E98393" Ref="#PWR?"  Part="1" 
+AR Path="/62E458D7/62E98393" Ref="#PWR0177"  Part="1" 
+F 0 "#PWR0177" H 2150 1950 50  0001 C CNN
+F 1 "GND" H 2155 2027 50  0000 C CNN
+F 2 "" H 2150 2200 50  0001 C CNN
+F 3 "" H 2150 2200 50  0001 C CNN
+	1    2150 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 2200 3850 2200
+Connection ~ 3100 2200
+Wire Wire Line
+	3100 2200 3350 2200
+Wire Wire Line
+	2600 2200 3100 2200
+Wire Wire Line
+	3550 1800 3850 1800
+Connection ~ 3100 1800
+Wire Wire Line
+	3100 1800 3350 1800
+Wire Wire Line
+	2600 1800 3100 1800
+$Comp
+L Device:D_Small D?
+U 1 1 62E983A1
+P 3450 1800
+AR Path="/62E983A1" Ref="D?"  Part="1" 
+AR Path="/62E458D7/62E983A1" Ref="D1"  Part="1" 
+F 0 "D1" H 3450 1593 50  0000 C CNN
+F 1 "D_Small" H 3450 1684 50  0000 C CNN
+F 2 "" V 3450 1800 50  0001 C CNN
+F 3 "~" V 3450 1800 50  0001 C CNN
+	1    3450 1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Small D?
+U 1 1 62E983A7
+P 3450 2200
+AR Path="/62E983A7" Ref="D?"  Part="1" 
+AR Path="/62E458D7/62E983A7" Ref="D2"  Part="1" 
+F 0 "D2" H 3450 2407 50  0000 C CNN
+F 1 "D_Small" H 3450 2316 50  0000 C CNN
+F 2 "" V 3450 2200 50  0001 C CNN
+F 3 "~" V 3450 2200 50  0001 C CNN
+	1    3450 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J?
+U 1 1 62E983AD
+P 2800 2000
+AR Path="/62E983AD" Ref="J?"  Part="1" 
+AR Path="/62E458D7/62E983AD" Ref="J20"  Part="1" 
+F 0 "J20" H 2850 2417 50  0000 C CNN
+F 1 "Conn_02x05_Odd_Even" H 2850 2326 50  0000 C CNN
+F 2 "" H 2800 2000 50  0001 C CNN
+F 3 "~" H 2800 2000 50  0001 C CNN
+	1    2800 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Reference_Voltage:LM4040DBZ-10 U?
+U 1 1 62E9EDEC
+P 8650 3200
+AR Path="/62E9EDEC" Ref="U?"  Part="1" 
+AR Path="/62E458D7/62E9EDEC" Ref="U11"  Part="1" 
+F 0 "U11" V 8604 3082 50  0000 R CNN
+F 1 "LM4040DBZ-10" V 8518 3082 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8650 3000 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm4040-n.pdf" H 8650 3200 50  0001 C CIN
+	1    8650 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 62E9EDF2
+P 8650 2400
+AR Path="/62E9EDF2" Ref="#PWR?"  Part="1" 
+AR Path="/62E458D7/62E9EDF2" Ref="#PWR0178"  Part="1" 
+F 0 "#PWR0178" H 8650 2500 50  0001 C CNN
+F 1 "-12V" H 8665 2573 50  0000 C CNN
+F 2 "" H 8650 2400 50  0001 C CNN
+F 3 "" H 8650 2400 50  0001 C CNN
+	1    8650 2400
+	1    0    0    -1  
+$EndComp
+Text GLabel 8400 2850 0    50   Input ~ 0
+AREF_-10
+$Comp
+L power:GND #PWR?
+U 1 1 62E9EDF9
+P 8650 3500
+AR Path="/62E9EDF9" Ref="#PWR?"  Part="1" 
+AR Path="/62E458D7/62E9EDF9" Ref="#PWR0179"  Part="1" 
+F 0 "#PWR0179" H 8650 3250 50  0001 C CNN
+F 1 "GND" H 8655 3327 50  0000 C CNN
+F 2 "" H 8650 3500 50  0001 C CNN
+F 3 "" H 8650 3500 50  0001 C CNN
+	1    8650 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 62E9EDFF
+P 8650 2650
+AR Path="/62E9EDFF" Ref="R?"  Part="1" 
+AR Path="/62E458D7/62E9EDFF" Ref="R87"  Part="1" 
+F 0 "R87" H 8718 2696 50  0000 L CNN
+F 1 "1.33k" H 8718 2605 50  0000 L CNN
+F 2 "" H 8650 2650 50  0001 C CNN
+F 3 "~" H 8650 2650 50  0001 C CNN
+	1    8650 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 62E9EE05
+P 9000 3150
+AR Path="/62E9EE05" Ref="C?"  Part="1" 
+AR Path="/62E458D7/62E9EE05" Ref="C52"  Part="1" 
+F 0 "C52" H 9092 3196 50  0000 L CNN
+F 1 "1u" H 9092 3105 50  0000 L CNN
+F 2 "" H 9000 3150 50  0001 C CNN
+F 3 "~" H 9000 3150 50  0001 C CNN
+	1    9000 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 62E9EE0B
+P 9550 3150
+AR Path="/62E9EE0B" Ref="C?"  Part="1" 
+AR Path="/62E458D7/62E9EE0B" Ref="C53"  Part="1" 
+F 0 "C53" H 9642 3196 50  0000 L CNN
+F 1 "1u" H 9642 3105 50  0000 L CNN
+F 2 "" H 9550 3150 50  0001 C CNN
+F 3 "~" H 9550 3150 50  0001 C CNN
+	1    9550 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 2400 8650 2500
+Wire Wire Line
+	8650 2750 8650 2850
+Wire Wire Line
+	8650 2850 9000 2850
+Wire Wire Line
+	9000 2850 9000 3050
+Connection ~ 8650 2850
+Wire Wire Line
+	8650 2850 8650 3050
+Wire Wire Line
+	9000 3250 9000 3400
+Wire Wire Line
+	9000 3400 8650 3400
+Wire Wire Line
+	8650 3400 8650 3350
+Wire Wire Line
+	8650 3500 8650 3400
+Connection ~ 8650 3400
+Wire Wire Line
+	8650 2500 9550 2500
+Wire Wire Line
+	9550 2500 9550 3050
+Connection ~ 8650 2500
+Wire Wire Line
+	8650 2500 8650 2550
+Wire Wire Line
+	9550 3250 9550 3400
+Wire Wire Line
+	9550 3400 9000 3400
+Connection ~ 9000 3400
+Wire Wire Line
+	8650 2850 8400 2850
+Text Notes 8050 2700 0    50   ~ 0
+950uA R_L\n
+$Comp
+L power:+12V #PWR?
+U 1 1 62EACD03
+P 2550 3550
+AR Path="/62EACD03" Ref="#PWR?"  Part="1" 
+AR Path="/62E458D7/62EACD03" Ref="#PWR0180"  Part="1" 
+F 0 "#PWR0180" H 2550 3400 50  0001 C CNN
+F 1 "+12V" H 2565 3723 50  0000 C CNN
+F 2 "" H 2550 3550 50  0001 C CNN
+F 3 "" H 2550 3550 50  0001 C CNN
+	1    2550 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C56
+U 1 1 62EB13DF
+P 4450 3900
+F 0 "C56" H 4542 3946 50  0000 L CNN
+F 1 "100n" H 4542 3855 50  0000 L CNN
+F 2 "" H 4450 3900 50  0001 C CNN
+F 3 "~" H 4450 3900 50  0001 C CNN
+	1    4450 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C59
+U 1 1 62EB1C55
+P 4450 5150
+F 0 "C59" H 4542 5196 50  0000 L CNN
+F 1 "100n" H 4542 5105 50  0000 L CNN
+F 2 "" H 4450 5150 50  0001 C CNN
+F 3 "~" H 4450 5150 50  0001 C CNN
+	1    4450 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 3550 2550 3800
+Wire Wire Line
+	2550 3800 2550 5050
+Wire Wire Line
+	2550 5050 2800 5050
+Connection ~ 2550 3800
+$Comp
+L power:GND #PWR0181
+U 1 1 62EB7824
+P 2750 4250
+F 0 "#PWR0181" H 2750 4000 50  0001 C CNN
+F 1 "GND" H 2755 4077 50  0000 C CNN
+F 2 "" H 2750 4250 50  0001 C CNN
+F 3 "" H 2750 4250 50  0001 C CNN
+	1    2750 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0182
+U 1 1 62EB7CD3
+P 3400 4250
+F 0 "#PWR0182" H 3400 4000 50  0001 C CNN
+F 1 "GND" H 3405 4077 50  0000 C CNN
+F 2 "" H 3400 4250 50  0001 C CNN
+F 3 "" H 3400 4250 50  0001 C CNN
+	1    3400 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0183
+U 1 1 62EB8392
+P 3900 4250
+F 0 "#PWR0183" H 3900 4000 50  0001 C CNN
+F 1 "GND" H 3905 4077 50  0000 C CNN
+F 2 "" H 3900 4250 50  0001 C CNN
+F 3 "" H 3900 4250 50  0001 C CNN
+	1    3900 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0184
+U 1 1 62EB892B
+P 4450 4250
+F 0 "#PWR0184" H 4450 4000 50  0001 C CNN
+F 1 "GND" H 4455 4077 50  0000 C CNN
+F 2 "" H 4450 4250 50  0001 C CNN
+F 3 "" H 4450 4250 50  0001 C CNN
+	1    4450 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0185
+U 1 1 62EB8F3B
+P 3400 5550
+F 0 "#PWR0185" H 3400 5300 50  0001 C CNN
+F 1 "GND" H 3405 5377 50  0000 C CNN
+F 2 "" H 3400 5550 50  0001 C CNN
+F 3 "" H 3400 5550 50  0001 C CNN
+	1    3400 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0186
+U 1 1 62EB94C5
+P 3900 5550
+F 0 "#PWR0186" H 3900 5300 50  0001 C CNN
+F 1 "GND" H 3905 5377 50  0000 C CNN
+F 2 "" H 3900 5550 50  0001 C CNN
+F 3 "" H 3900 5550 50  0001 C CNN
+	1    3900 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0187
+U 1 1 62EB9BAB
+P 4450 5550
+F 0 "#PWR0187" H 4450 5300 50  0001 C CNN
+F 1 "GND" H 4455 5377 50  0000 C CNN
+F 2 "" H 4450 5550 50  0001 C CNN
+F 3 "" H 4450 5550 50  0001 C CNN
+	1    4450 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 4000 2750 4250
+Wire Wire Line
+	3400 4100 3400 4250
+Wire Wire Line
+	3900 4000 3900 4250
+Wire Wire Line
+	4450 4000 4450 4250
+Wire Wire Line
+	3400 5350 3400 5550
+Wire Wire Line
+	3900 5250 3900 5550
+Wire Wire Line
+	4450 5250 4450 5550
+$Comp
+L power:+5VD #PWR0188
+U 1 1 62EC10CB
+P 4450 3450
+F 0 "#PWR0188" H 4450 3300 50  0001 C CNN
+F 1 "+5VD" H 4465 3623 50  0000 C CNN
+F 2 "" H 4450 3450 50  0001 C CNN
+F 3 "" H 4450 3450 50  0001 C CNN
+	1    4450 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5VA #PWR0189
+U 1 1 62EC1A90
+P 4950 4900
+F 0 "#PWR0189" H 4950 4750 50  0001 C CNN
+F 1 "+5VA" H 4965 5073 50  0000 C CNN
+F 2 "" H 4950 4900 50  0001 C CNN
+F 3 "" H 4950 4900 50  0001 C CNN
+	1    4950 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 3450 4450 3800
+Connection ~ 4450 3800
+Wire Wire Line
+	4950 4900 4950 5050
+Wire Wire Line
+	4950 5050 4450 5050
+Connection ~ 4450 5050
+Text Notes 5050 5050 0    50   ~ 0
+5VA: MCP3304 ADC VREF / 8x  input rails\n          DAC8568 DAC AVDD\n          800mA max
+Text Notes 4700 3450 0    50   ~ 0
+5VD: TEENSY 4.1
+$Comp
+L Regulator_Linear:LM7805_TO220 U12
+U 1 1 62EDA007
+P 3400 3800
+F 0 "U12" H 3400 4042 50  0000 C CNN
+F 1 "LM7805" H 3400 3951 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3400 4025 50  0001 C CIN
+F 3 "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF" H 3400 3750 50  0001 C CNN
+	1    3400 3800
+	1    0    0    -1  
+$EndComp
+Text Notes 4700 3600 0    50   ~ 0
+1 A for the USB bus (grids 8x16 led)\n1.5 A MAX
+Wire Wire Line
+	3700 5050 3900 5050
+$Comp
+L Device:C_Small C58
+U 1 1 63330C2F
+P 3900 5150
+F 0 "C58" H 3992 5196 50  0000 L CNN
+F 1 "22u" H 3992 5105 50  0000 L CNN
+F 2 "" H 3900 5150 50  0001 C CNN
+F 3 "~" H 3900 5150 50  0001 C CNN
+	1    3900 5150
+	1    0    0    -1  
+$EndComp
+Connection ~ 3900 5050
+Wire Wire Line
+	3900 5050 4450 5050
+Wire Wire Line
+	3700 3800 3900 3800
+$Comp
+L Device:C_Small C55
+U 1 1 633313CC
+P 3900 3900
+F 0 "C55" H 3992 3946 50  0000 L CNN
+F 1 "22u" H 3992 3855 50  0000 L CNN
+F 2 "" H 3900 3900 50  0001 C CNN
+F 3 "~" H 3900 3900 50  0001 C CNN
+	1    3900 3900
+	1    0    0    -1  
+$EndComp
+Connection ~ 3900 3800
+Wire Wire Line
+	3900 3800 4450 3800
+Wire Wire Line
+	2550 3800 2750 3800
+$Comp
+L Device:C_Small C54
+U 1 1 63331BEA
+P 2750 3900
+F 0 "C54" H 2842 3946 50  0000 L CNN
+F 1 "22u" H 2842 3855 50  0000 L CNN
+F 2 "" H 2750 3900 50  0001 C CNN
+F 3 "~" H 2750 3900 50  0001 C CNN
+	1    2750 3900
+	1    0    0    -1  
+$EndComp
+Connection ~ 2750 3800
+Wire Wire Line
+	2750 3800 3100 3800
+$Comp
+L Device:C_Small C57
+U 1 1 633329BF
+P 2800 5150
+F 0 "C57" H 2892 5196 50  0000 L CNN
+F 1 "22u" H 2892 5105 50  0000 L CNN
+F 2 "" H 2800 5150 50  0001 C CNN
+F 3 "~" H 2800 5150 50  0001 C CNN
+	1    2800 5150
+	1    0    0    -1  
+$EndComp
+Connection ~ 2800 5050
+Wire Wire Line
+	2800 5050 3100 5050
+$Comp
+L power:GND #PWR0190
+U 1 1 63333077
+P 2800 5550
+F 0 "#PWR0190" H 2800 5300 50  0001 C CNN
+F 1 "GND" H 2805 5377 50  0000 C CNN
+F 2 "" H 2800 5550 50  0001 C CNN
+F 3 "" H 2800 5550 50  0001 C CNN
+	1    2800 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 5250 2800 5550
+Text Notes 1400 5200 0    50   ~ 0
+curious if these should be 22u\n
+Text Notes 1850 6300 0    50   ~ 0
+Can't find great information on selecting bypass caps. I'm assuming\nmore current requires bigger caps to whether the dip.\no+C has 22u/10u around the psu... Elements has 47u/22u... The draw on this seems closer to Elements, but I haven't added that all up except for the -10 ref load for the lm4040... how do you add that up? 
+$EndSCHEMATC
